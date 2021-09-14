@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .my-primary {
+            background-color: #757575;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src=" avatar.jpg" alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <p>Lorem, ipsum <b>dolor</b> sit <strong>amet</strong> consectetur <i>adipisicing</i> elit. Consequatur
+                    quidem exercitationem dicta quas voluptatibus, <span
+                        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:magenta">dolores</span>
+                    ex blanditiis et aperiam sapiente ducimus at nihil aliquam itaque dolore? Provident optio nesciunt
+                    neque!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <h1>Форма</h1>
+                <table>
+                    <form>
+                        <tr>
+                            <td> имя</td>
+                            <td><input type="text" required, placeholder="Иван"></td>
+                        </tr>
+                        <tr>
+                            <td>Фамилия</td>
+                            <td><input type="text" required, placeholder="Иванов"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Почта</td>
+                            <td><input type="email" required, placeholder="@gmail.com"></td>
+                        <tr>
+                            <td>Пароль</td>
+                            <td><input type="password" required, placeholder="Иван"></td>
+                        <tr>
+                            <td><button type="submit">Подтвердить</button></td>
+                            <td><button type="reset">Сбросить</button></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <h1>Форма</h1>
+                    <form>
+                        <label for="inputName">Имя</label>
+                        <input type="text" required placeholder="Иван" class="form-control">
+                        <div id="inputNameField" class='form-text'></div>
+                        <label for="inputSecondName">Фамилия</label>
+                        <input type="text" required placeholder="Иванов" class="form-control">
+                        <div id="inputSecondNameField" class='form-text'></div>
+                        <label for="inputEmail">Почта</label>
+                        <input type="text" required placeholder="ivan.ivanov@example.com" class="form-control">
+                        <div id="inputEmailField" class='form-text'></div>
+                        <label for="inputPassword">Фамилия</label>
+                        <input type="password" required placeholder="password" class="form-control"
+                            aria-describedby="passwordHelpBlock">
+                        <div id="inputPasswordField" class='form-text'></div>
+                        <button class="btn btn-outline-dark" type="submit">отправить</button>
+                        <button class="btn btn-outline-danger" type="reset"> сбросить</button>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <h1>Таблица</h1>
+                    <h2>Знаменатель</h2>
+                    <h3>Понедельник</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">Название предмета</div>
+                            <div class="col-4">Время</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 rowspan-2">
+                                Теор. вер.
+                            </div>
+                            <div class="col-4">8:30-10:05</div>
+                        </div class="row">
+                        <div class="row">
+                            <div class="col-8"></div>
+                            <div class="col-4">10:15-11:50</div>            
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                Окно
+                            </div>  
+                            <div class="col-4">12:00-13:50</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                Физра
+                            </div>
+                            <div class="col-4">13:50-15:25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Lorem, ipsum <b>dolor</b> sit <strong>amet</strong> consectetur <i>adipisicing</i> elit.
+                        Consequatur quidem exercitationem dicta quas voluptatibus, dolores ex blanditiis et aperiam
+                        sapiente ducimus at nihil aliquam itaque dolore? Provident optio nesciunt neque!</p>
+                </div>
+            </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
