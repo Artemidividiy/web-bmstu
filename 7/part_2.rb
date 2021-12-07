@@ -2,7 +2,7 @@
 
 # класс точки
 class Dot
-  attr_accessor :x_coordinate, :y_coordinate
+  attr_reader :x_coordinate, :y_coordinate
 
   def initialize(x_value, y_value)
     @x_coordinate = x_value
@@ -16,7 +16,7 @@ end
 
 # класс окружности
 class Circle < Dot
-  attr_accessor :center, :radius
+  attr_reader :center, :radius
 
   def initialize(center, radius)
     super

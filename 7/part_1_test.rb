@@ -7,7 +7,7 @@ DIR = './texts/'
 CHARS = ('a'..'Z').to_a
 
 # testing execution
-class Lab7Test1 < MiniTest::Test
+class Test < MiniTest::Test
   def test_write_f
     10.times do
       exec(generate_random.to_s)
@@ -26,14 +26,14 @@ class Lab7Test1 < MiniTest::Test
     CHARS.sample(rand(10)).join
   end
 
-  # def test_execute
-  #   exec("rm #{DIR}/F.txt #{DIR}/G.txt")
-  #   20.times do
-  #     lines = 20.times do
-  #       lines << generate_random
-  #     end
-  #     execute(DIR.to_s)
-  #     lines.each { |line| exec("#{line}\n") }
-  #   end
-  # end
+  def test_execute
+    exec("rm #{DIR}/F.txt #{DIR}/G.txt")
+    20.times do
+      lines = 20.times do
+        lines << generate_random
+      end
+      execute(DIR.to_s)
+      lines.each { |line| exec("#{line}\n") }
+    end
+  end
 end

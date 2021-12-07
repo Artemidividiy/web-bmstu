@@ -7,8 +7,8 @@
 def parse_f(path)
   f_lines = open_f("#{path}F.txt")
   File.open("#{path}G.txt", 'a') do |file|
-    f_lines.each do |line|
-     file.puts(line.downcase)
+    f_lines.each do 
+      |line| file.puts(line.downcase)
     end
   end
 end
