@@ -20,6 +20,7 @@ class ArmstrongController < ApplicationController
     if n_value <= 0 || n_value >= 8
       malformed
     else
+      @results
       @results = (10**(n_value - 1)...10**n_value).filter { |x_value| armstrong?(x_value) }
     end
   end
