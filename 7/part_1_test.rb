@@ -48,4 +48,3 @@ class Test < MiniTest::Test
     system("rm #{DIR}F.txt") # избавимся от файла, чтобы получить ошибку
     assert_equal('Problem occured, while reading the file', open_f("#{DIR}F.txt"), "didn't caught the exception")
   end
-end
