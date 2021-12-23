@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/">
+    <xsl:template match="integers">
         <html>
             <head>
                 <title>XML Visualiser</title>
@@ -17,14 +17,15 @@
                         </tr>
                     </thead>
                     <tbody id='result'>
-                        <xsl:for-each select="integers/integer">
+                        <xsl:variable name="numbers" select="integer" />
+                        <xsl:for-each select="$numbers">
                             <xsl:variable name="pos" select="position() - 1"/>
                             <tr scope="row">
                                 <th>
                                     <xsl:value-of select="$pos + 1"/>
                                 </th>
                                 <td>
-                                    <xsl:value-of select="integer[$pos]/text"/>
+                                    <xsl:value-of select="."/>
                                 </td>
                             </tr>
                         </xsl:for-each>
