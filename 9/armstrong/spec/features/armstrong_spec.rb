@@ -6,9 +6,9 @@ def armstrong?(x_value)
 end
 
 def armstrong_nums(iter_val)
-    (10**(iter_val - 1)...10**iter_val).filter { |x_value| armstrong?(x_value) }
+   if (10**(iter_val - 1)...10**iter_val).filter { |x_value| armstrong?(x_value) }
   else
-    (10**(iter_val - 1)...10**iter_val).filter { |x_value| armstrong?(x_value) }.concat armstrong_nums(iter_val - 1)
+    (10**(iter_val - 1)...10**iter_val).filter { |x_value| armstrong?(x_value) }.concat armstrong_nums(iter_val( - 1))
   end
 end
   click_button 'commit'

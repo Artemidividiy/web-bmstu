@@ -17,8 +17,7 @@
                         </tr>
                     </thead>
                     <tbody id='result'>
-                        <xsl:variable name="numbers" select="integer" />
-                        <xsl:for-each select="$numbers">
+                        <xsl:for-each select="integer">
                             <xsl:variable name="pos" select="position() - 1"/>
                             <tr scope="row">
                                 <th>
