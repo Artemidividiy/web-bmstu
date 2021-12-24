@@ -13,12 +13,16 @@ def parse_f(path)
   end
 end
 
-def write_f(path)
-  input = gets.chomp
-  File.open(path, 'a') do |file|
-    until input.empty?
-      file.puts(input)
-      input = gets.chomp
+def write_f(path, content)
+  if content then
+    File.open(path, 'a').write(content)
+  else
+    input = gets.chomp
+    File.open(path, 'a') do |file|
+      until input.empty?
+        file.puts(input)
+        input = gets.chomp
+      end
     end
   end
 end
