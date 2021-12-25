@@ -1,3 +1,5 @@
+# frozen-string-literal: true
+
 require 'rails_helper'
 
 describe ArmstrongController, type: :controller do
