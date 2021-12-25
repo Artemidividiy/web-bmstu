@@ -4,7 +4,6 @@ def submit_form(number)
   visit root_path
   fill_in 'number', with: number
   click_button 'commit'
-  puts find(:id, 'results').text
   find(:id, 'results').text
 end
 
@@ -35,6 +34,6 @@ describe 'Armstrong Calculator', type: :feature do
 
   it 'does output', js: true do
     
-    expect Array(submit_form(3)).each_slice(2).map(&:last).to match Array(list_of_numbers)
+    expect(submit_form(3)).to include(list_of_numbers(3).sample.to_s)
   end
 end
