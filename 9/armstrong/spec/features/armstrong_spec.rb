@@ -33,7 +33,6 @@ describe 'Armstrong Calculator', type: :feature do
   end
 
   it 'does output', js: true do
-    
     expect(submit_form(3)).to include(list_of_numbers(3).sample.to_s)
   end
 end
