@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  root 'armstrong#input'
+  match 'armstrong/output', via: %I[get post]
+  get 'armstrong/data'
+  get '/signin', to: 'sessions#new'
+  get '/signup', to: 'users#new'
 end
