@@ -1,0 +1,2 @@
+class ArmstrongController < ApplicationController
+end
