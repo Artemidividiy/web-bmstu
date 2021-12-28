@@ -1,0 +1,2 @@
+cd armstrong
+rails s

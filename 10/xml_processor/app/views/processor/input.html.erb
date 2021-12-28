@@ -1,4 +1,15 @@
-<%= form_tag processor_output_path, method: "get", class: 'form-inline col-2', style: 'padding: 50px;' do %>
+<%= form_tag(processor_output_path, method: "get", style: "width: 400px; padding: 50px") do |f| %>
     <%= number_field_tag 'number', nil, within: 1..7, required: true, class: 'form-control', placeholder: 'Enter a number' %>
     <%= submit_tag 'Calculate', class: "btn btn-outline-primary col-12", style: 'margin-top: 20px;' %>
+    <%= label_tag("client_side", "XML rendering mode:", for: "radio-group") %>
+    <div id="radio-group" style="margin: 10px">
+        <div>
+            <%= radio_button_tag('format', 'xml', true, class: "form-check-input") %>
+            <%= label_tag("client_side", "Client-side (in browser)", for: "format_xml") %>
+        </div>
+        <div>
+            <%= radio_button_tag('format', 'html', true, class: "form-check-input") %>
+            <%= label_tag("server_side", "Server-side", for: "format_html") %>
+        </div>
+    </div>
 <% end %>

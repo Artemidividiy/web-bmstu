@@ -14,7 +14,7 @@ def parse_f(path)
 end
 
 def write_f(path, content)
-  if content then
+  if !content.empty? then
     File.open(path, 'a').write(content)
   else
     input = gets.chomp
@@ -35,6 +35,6 @@ rescue StandardError => e
 end
 
 def execute(path)
-  write_f("#{path}F.txt")
+  write_f("#{path}F.txt",'')
   parse_f(path)
 end

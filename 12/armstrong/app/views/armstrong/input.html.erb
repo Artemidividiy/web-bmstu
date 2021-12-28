@@ -1,0 +1,19 @@
+<div style="width: 400px; padding: 50px">
+<% if @current_user.admin %>
+    <%= button_to 'Control Panel', users_path, method: :get, class: 'btn btn-outline-primary col-12' %>
+  <% else %>
+    <%= button_to 'Account settings', { controller: :users, action: :show, id: session[:current_user_id] },
+                  class: 'btn btn-outline-primary col-12', method: :get %>
+  <% end %>
+  <%= button_to 'Sign out', { controller: :sessions, action: :destroy, id: session[:session_id] },
+                method: :delete, class: 'btn btn-secondary col-12'%>
+                
+<%= form_tag(armstrong_output_path, method: "post") do |f| %>
+    <%= label_tag "number", "number" %>
+    <%= number_field_tag('number', 0, class: "form-control col-12", min: 0, max: 100, required: true) %>
+    <%= submit_tag("calculate", class: "btn btn-primary col-12") %>
+<% end %>
+<% if @current_user.admin%>
+  <%= button_to("Get all cached data", { action: :data, format: :xml }, method: :get, class: "btn btn-outline-primary col-12") %>
+  <%end%>
+</div>
