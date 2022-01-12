@@ -34,7 +34,7 @@ rescue StandardError => e
   'Problem occured, while reading the file'
 end
 
-def execute(path)
-  write_f("#{path}F.txt",'')
+def execute(path, content='')
+  write_f("#{path}F.txt",content)
   parse_f(path)
 end
