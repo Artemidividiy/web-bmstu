@@ -7,16 +7,14 @@
 def parse_f(path)
   f_lines = open_f("#{path}F.txt")
   File.open("#{path}G.txt", 'a') do |file|
-    f_lines.each do 
-      |line| file.puts(line.downcase)
+    f_lines.each do |line|
+      file.puts(line.downcase)
     end
   end
 end
 
 def write_f(path, content)
-  if !content.empty? then
-    File.open(path, 'a').write(content)
-  else
+  if content.empty?
     input = gets.chomp
     File.open(path, 'a') do |file|
       until input.empty?
@@ -24,6 +22,8 @@ def write_f(path, content)
         input = gets.chomp
       end
     end
+  else
+    File.open(path, 'a').write(content)
   end
 end
 
@@ -34,7 +34,7 @@ rescue StandardError => e
   'Problem occured, while reading the file'
 end
 
-def execute(path, content='')
-  write_f("#{path}F.txt",content)
+def execute(path, content = '')
+  write_f("#{path}F.txt", content)
   parse_f(path)
 end
