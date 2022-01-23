@@ -16,6 +16,6 @@ class Solution
   def calculate(precision)
     precision = precision.to_f
     d_value = 2 / precision
-    get_result(precision, d_value)  
+    get_result(precision, d_value)
   end
 end

@@ -4,9 +4,8 @@
 class Solution
   def initialize; end
 
-  def sentence(_x_value, _z_value, _r_value)
-    @result = Math.sin(_x_value + Math::PI * _z_value) / Math.cos(_x_value / _r_value)
-    @result
+  def sentence(x_value, z_value, r_value)
+    Math.sin(x_value + Math::PI * z_value) / Math.cos(x_value / r_value)
   rescue StandardError => e
     puts e
     'Cannot divide by zero'

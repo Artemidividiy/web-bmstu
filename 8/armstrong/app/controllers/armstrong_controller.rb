@@ -10,9 +10,9 @@ class ArmstrongController < ApplicationController
   end
 
   def malformed
-      respond_to do |format|
-        format.html {render html: 'Malformed request!', status: 500 }
-      end
+    respond_to do |format|
+      format.html { render html: 'Malformed request!', status: 500 }
+    end
   end
 
   def output

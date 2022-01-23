@@ -12,7 +12,7 @@ CHARS = %w[a b c d A B C D].freeze
 class Test < MiniTest::Test
   def generate_random
     res = []
-    10.times { res << CHARS.sample(rand(10)).join.to_s + "\n" }
+    10.times { res << "#{CHARS.sample(rand(10)).join}\n" }
     res
   end
 

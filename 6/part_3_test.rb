@@ -6,6 +6,7 @@ require './part_3'
 
 # some funny testing
 class Test < Minitest::Test
+  
   def testing_block
     assert_equal(757_323_886.3271068, intg(0.1, 1, 1e-9) do |x_value|
                                         (Math.sin x_value) / x_value

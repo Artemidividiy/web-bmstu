@@ -7,6 +7,6 @@ class Solution
   def decrypt(str, key)
     @t_str = ''
     str.each_char { |x| @t_str += x != ' ' ? (x.ord + key).chr : x }
-    return @t_str
+    @t_str
   end
 end

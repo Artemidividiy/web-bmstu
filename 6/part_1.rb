@@ -3,7 +3,7 @@
 def looop(precision, d_value)
   res = 0
   (1...d_value).each do |iter|
-    res += Math.log(1 .0+ iter * precision / 2) * precision / 2
+    res += Math.log(1.0 + iter * precision / 2) * precision / 2
   end
   res
 end
@@ -11,5 +11,5 @@ end
 def calculate(precision)
   precision = precision.to_f
   d_value = 2 / precision
-  return looop(precision, d_value)
+  looop(precision, d_value)
 end

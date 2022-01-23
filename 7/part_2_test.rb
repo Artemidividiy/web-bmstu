@@ -30,4 +30,9 @@ class Test < MiniTest::Test
     num_second = rand(10).to_f
     num_first / num_second
   end
+
+  def test_class_hierarchy
+    assert Circle.superclass == Dot
+    assert Circle.new(1, 1).is_a? Dot
+  end
 end
