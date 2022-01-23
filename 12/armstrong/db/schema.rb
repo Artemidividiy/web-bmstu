@@ -10,23 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_26_213613) do
-
-  create_table "results", force: :cascade do |t|
-    t.text "value"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "number"
+ActiveRecord::Schema.define(version: 20_211_226_213_613) do
+  create_table 'results', force: :cascade do |t|
+    t.text 'value'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.integer 'number'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "email"
-    t.string "password_digest"
-    t.boolean "admin"
+  create_table 'users', force: :cascade do |t|
+    t.string 'username'
+    t.string 'password'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'email'
+    t.string 'password_digest'
+    t.boolean 'admin'
   end
-
 end

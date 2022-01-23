@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: %i[new create destroy]
   root 'armstrong#input'
   match 'armstrong/output', via: %I[get post]
   get 'armstrong/data'

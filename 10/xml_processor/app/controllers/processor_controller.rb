@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 XML_SERVER = 'http://localhost:3000/?format=xml'
 XSL_LINK = "\n<?xml-stylesheet href=\"/visualizer.xsl\" type=\"text/xsl\"?>\n"
 XSLT = Nokogiri::XSLT(File.read('public/visualizer.xsl').gsub(%r{<rm>(.*)</rm>}, '<rm>server-side</rm>'))
 MSG_NOT_ACCEPTABLE = '406: Not Acceptable: This page is only available in XML format'
 
+# Контроллер нашего приложения
 class ProcessorController < ApplicationController
   def input; end
 

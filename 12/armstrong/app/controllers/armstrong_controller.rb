@@ -29,9 +29,9 @@ class ArmstrongController < ApplicationController
 
   def output
     @number = params['number'].to_i || 1
-    if ( cached = Result.find_by(number: @number))
-      @rows = cached.value[1..cached.value.length() - 2].split(",")        
-    else 
+    if (cached = Result.find_by(number: @number))
+      @rows = cached.value[1..cached.value.length - 2].split(',')
+    else
       @rows = gen_armstrong_nums(@number)
       Result.create value: @rows.to_json, number: @number
     end
